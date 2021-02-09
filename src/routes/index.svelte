@@ -11,9 +11,8 @@ import Banner from '../components/Banner.svelte';
 <div class="content-holder">
 	<div class="container">
 			<div class = "intro">
-			<p> <p style="align: left;"> “Hello! I am Kelly Yung 😎</p>
-				<p style="align: right;"> Your Friendly Software Engineer Neighbourhood👩‍💻”</p>
-			</p>
+				<p style="text-align: left;"> “Hello! I am Kelly Yung 😎</p>
+				<p style="text-align: right;"> Your Friendly Software Engineer Neighbourhood👩‍💻”</p>
 			<Banner/>
 			</div>
 	</div>
