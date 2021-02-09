@@ -1,50 +1,54 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+import Banner from '../components/Banner.svelte';
 </script>
 
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Slabo+27px" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<div class="content-holder">
+	<div class="container">
+			<div class = "intro">
+			<p> <p style="align: left;"> “Hello! I am Kelly Yung 😎</p>
+				<p style="align: right;"> Your Friendly Software Engineer Neighbourhood👩‍💻”</p>
+			</p>
+			<Banner/>
+			</div>
+	</div>
+</div>
+
+
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+.content-holder {
+	background-image: linear-gradient(135deg, #ffdb43 25%, #3d6f8e 25%, #3d6f8e 50%, #ffdb43 50%, #ffdb43 75%, #3d6f8e 75%, #3d6f8e 100%);
+    background-size: 84.85px 84.85px;
+	width: 100%;
+	height: 100%;
+}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	align-items: center;
+	min-height: 100%;
+	padding: 2em;
+}
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
 
-	p {
-		margin: 1em auto;
-	}
+.intro {
+	background-color: lightyellow;
+	padding: 2em;
+	font-size: 1.5em;
+}
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+.intro p {
+  font-family: 'Press Start 2P', cursive;
+}
+
 </style>
 
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
