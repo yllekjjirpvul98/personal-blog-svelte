@@ -1,7 +1,7 @@
 <script>
 	import Nav from '../components/Nav.svelte';
-
 	export let segment;
+	
 </script>
 
 <style>
@@ -15,6 +15,13 @@
 		width: 100%;
 	}
 </style>
+
+
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Slabo+27px" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 
 <Nav {segment}/>
 

@@ -1,12 +1,15 @@
 <script>
 import Banner from '../components/Banner.svelte';
+import Elizabeth from '../components/Elizabeth.svelte';
+export let appear;
+const handleMouseenter = () => { appear = true; console.log(appear); };
+const handleMouseleave = () => { appear = false; console.log(appear); };
 </script>
 
-
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Slabo+27px" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
+<svelte:body
+	on:mouseenter={handleMouseenter}
+	on:mouseleave={handleMouseleave}
+/>
 
 <div class="content-holder">
 	<div class="container">
@@ -17,9 +20,13 @@ import Banner from '../components/Banner.svelte';
 			</div>
 	</div>
 </div>
-
+<Elizabeth appear={appear}/>
 
 <style>
+
+:global(body) {
+	overflow: hidden;
+}
 
 .content-holder {
 	background-image: linear-gradient(135deg, #ffdb43 25%, #3d6f8e 25%, #3d6f8e 50%, #ffdb43 50%, #ffdb43 75%, #3d6f8e 75%, #3d6f8e 100%);
